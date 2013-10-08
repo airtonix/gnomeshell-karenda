@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Gnomeshell-karenda by airtonix</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/airtonix/gnomeshell-karenda">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Gnomeshell-karenda</h1>
+            <h2>Google Calendar in GNOME Shell</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/airtonix/gnomeshell-karenda/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/airtonix/gnomeshell-karenda/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="gnome-shell-google-calendar" class="anchor" href="#gnome-shell-google-calendar"><span class="octicon octicon-link"></span></a>gnome-shell-google-calendar</h1>
+
+<p>Google Calendar Daemon for GNOME Shell</p>
+
+<h2>
+<a name="what-is-it" class="anchor" href="#what-is-it"><span class="octicon octicon-link"></span></a>What is it?</h2>
+
+<p>A D-Bus service that fetches events from Google Calendar and makes them
+available for GNOME Shell to display.</p>
+
+<h2>
+<a name="what-do-i-need" class="anchor" href="#what-do-i-need"><span class="octicon octicon-link"></span></a>What do I need?</h2>
+
+<p>Python 2.6+ with the following modules:
+    gtk
+    dbus
+    gdata
+    iso8601</p>
+
+<p>Packages:
+    gtk-engines
+    gtk-engine-murrine
+    gtk-engine-equinox</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Run the daemon like so:</p>
+
+<pre><code>./gnome-shell-google-calendar.py
+</code></pre>
+
+<p>You will be prompted for your Google Calendar email the
+first time. A password is not neccesary, as gnome-online-accounts is used.</p>
+
+<p>Once logged in, events from all your calendars should appear in
+GNOME Shell's calendar.</p>
+
+<p>To exclude calendars, create a file named "excludes" in the directory
+you run "gnome-shell-google-calendar" from, or a file named
+".gnome-shell-google-calendar-excludes" in your home directory.
+List the title of each calendar you want to exclude on a separate
+line.</p>
+
+<h2>
+<a name="excluding-calendars" class="anchor" href="#excluding-calendars"><span class="octicon octicon-link"></span></a>Excluding Calendars</h2>
+
+<p>On first run, the daemon will create the following file for you, it will be blank.</p>
+
+<p><code>~/.config/gnome-shell-calendar/config.yaml</code></p>
+
+<p>When you want to exclude certain calendars, simply :</p>
+
+<ol>
+<li>open it up in your favourite text editor</li>
+<li>find the 'exclusions' key</li>
+<li>add the calendar names which you want to exclude as list items</li>
+</ol><p>for example:</p>
+
+<pre><code>- exclusions:
+  - Birthdays
+  - "The house that john built"
+  - "Loan repayments"
+</code></pre>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/airtonix">airtonix</a> can be found on <a href="https://github.com/airtonix/gnomeshell-karenda">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
