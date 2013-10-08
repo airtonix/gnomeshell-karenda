@@ -31,9 +31,3 @@ class TestGnomeGoogleCalendar(unittest.TestCase):
             backend.get_month_key(
                 datetime.datetime(2012, 1, 31))),
             ['20120101 000000', '20120204 235959'])
-
-
-if __name__ == "__main__":
-    tests = unittest.TestLoader().loadTestsFromTestCase(
-        TestGnomeGoogleCalendar)
-    unittest.TextTestRunner(verbosity=2).run(tests)
